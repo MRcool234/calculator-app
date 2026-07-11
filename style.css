@@ -1,0 +1,115 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: antiquewhite;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 5rem;
+  padding: 10px;
+  max-width: 320px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 10%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 5px;
+  background-color: hsl(0, 0%, 20%);
+  color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.operator {
+  height: 50px;
+  width: 50px;
+  background-color: hsl(33, 100%, 50%);
+  grid-column: 1 / 2;
+  color: whitesmoke;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#clearBtn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(33, 100%, 50%);
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#clearBtn:hover {
+  background-color: hsl(33, 100%, 40%);
+}
+
+#clearBtn:active {
+  background-color: hsl(33, 100%, 50%);
+}
+
+.operator:hover {
+  background-color: hsl(33, 100%, 40%);
+}
+
+.operator:active {
+  background-color: hsl(33, 100%, 50%);
+}
+
+.number {
+  height: 50px;
+  width: 50px;
+  background-color: hsl(0, 0%, 50%);
+  grid-column: span 1;
+  color: whitesmoke;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#equalsBtn {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 50%);
+  color: whitesmoke;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#equalsBtn:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+#equalsBtn:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.number:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+.number:active {
+  background-color: hsl(0, 0%, 50%);
+}
