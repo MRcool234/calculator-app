@@ -60,9 +60,9 @@ function handleEqualsClick() {
   }
   calculateResult();
   if (typeof result === "string") {
-    display.textContent = result;
-  } else {
-    display.textContent = Number(result).toFixed(2);
+    display.textContent = String(result);
+  } else if (typeof result === "number"){
+    display.textContent = result.toFixed(2);
   }
 
   previousInput = null;
