@@ -95,6 +95,6 @@ function calculateResult() {
         result = num1 / num2;
       }
       break;
-      return result;
+      return result.toFixed(2);
   }
 }
