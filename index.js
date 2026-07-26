@@ -97,9 +97,10 @@ function calculateResult() {
       }
       break;
       if (typeof result === "string") {
-        return result;
+        result = result;
       } else {
-        return result.toFixed(1);
+        result = result.toFixed(1);
       }
+      return result;
   }
 }
