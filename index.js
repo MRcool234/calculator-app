@@ -59,7 +59,7 @@ function handleEqualsClick() {
     return;
   }
   calculateResult();
-  display.textContent = result;
+  display.textContent = result.toFixed(2);
 
   previousInput = null;
   currentInput = result;
@@ -95,6 +95,6 @@ function calculateResult() {
         result = num1 / num2;
       }
       break;
-      return result.toFixed(2);
+      return result;
   }
 }
