@@ -60,11 +60,11 @@ function handleEqualsClick() {
   }
   calculateResult();
 
-  if (typeof result === "number"){
-    display.textContent = Number(result).toFixed(1);
-  } else if (typeof result === "string"){
-    display.textContent = String(result);
-  }
+ if (typeof result !== "string"){
+  result = result.toFixed(1);
+ }
+
+ display.textContent = result;
 
   previousInput = null;
   currentInput = result;
