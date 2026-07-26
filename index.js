@@ -59,7 +59,11 @@ function handleEqualsClick() {
     return;
   }
   calculateResult();
-  display.textContent = result.toFixed(2);
+  if (typeof result === "string") {
+    display.textContent = result;
+  } else {
+    display.textContent = Number(result).toFixed(2);
+  }
 
   previousInput = null;
   currentInput = result;
