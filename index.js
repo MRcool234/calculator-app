@@ -60,7 +60,11 @@ function handleEqualsClick() {
   }
   calculateResult();
 
-  display.textContent = result;
+  if (typeof result === "number"){
+    display.textContent = result.toFixed(1);
+  } else {
+    display.textContent = result;
+  }
 
   previousInput = null;
   currentInput = result;
@@ -96,11 +100,7 @@ function calculateResult() {
         result = num1 / num2;
       }
       break;
-      if (typeof result === "string") {
-        result = result;
-      } else {
-        result = result.toFixed(1);
-      }
+
       return result;
   }
 }
